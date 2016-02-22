@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- 
+    Student Name: Salman Vazirali Siddique
+    URL Address: http://omega.uta.edu/~svs5361/project2/map.html
+-->
+<html lang="en">
+  <head>
+    <title>Web Mashup: Display House Prices on a Map</title>
+    <meta charset="utf-8"/>
+	<style type="text/css">
+       html { height: 100% }
+       body { height: 100%; margin: 0; padding: 0 }
+       #map-canvas { height: 500px; width: 600px }
+    </style>
+	 <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWy3fTzPwZkLO-S8Z901SzoNH_wiocdEM">
+    </script>
+    <script type="text/javascript" src="map.js"></script>
+  </head>
+  <body onload="initialize();">	
+	<form>
+	   <br/><br/>
+	   <div align="center">Enter the address below to search for a house OR click anywhere in the map to find the nearest house.</div><br/>
+	   <div align="center"><input type="text" style="width: 50%;" id="address"/>
+       <input type="button" onclick="sendRequest();" value="Find"/>
+	   <input type="button" onclick="clearAll();" value="Clear"/></div>
+    </form><br/><br/>
+	<table style="width:80%" align="center">
+	<tr style="vertical-align:top">
+	<td><div id="map-canvas"></div></td>
+	<td><div margin-left="5%" id="output"></div></td>
+	</tr>
+	</table>
+  </body>
+  </body>
+</html>
